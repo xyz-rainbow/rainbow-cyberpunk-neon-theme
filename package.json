@@ -1,0 +1,56 @@
+{
+  "name": "rainbow-cyberpunk-neon-theme",
+  "displayName": "Rainbow Cyberpunk Neon",
+  "description": "Cyberpunk dark glass theme with neon lime, cyan, yellow, pink, orange and red accents.",
+  "version": "0.1.0",
+  "publisher": "xyz-rainbow",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "cyberpunk",
+    "neon",
+    "dark",
+    "glass",
+    "rainbow",
+    "lime",
+    "cyan"
+  ],
+  "files": [
+    "themes/**",
+    "media/**",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#2a0a3d",
+    "theme": "dark"
+  },
+  "author": {
+    "name": "xyz-rainbow",
+    "email": "rainbow@rainbowtechnology.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme"
+  },
+  "homepage": "https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme",
+  "bugs": {
+    "url": "https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme/issues"
+  },
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Rainbow Cyberpunk Neon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyberpunk-theme.jsonc"
+      }
+    ]
+  }
+}
