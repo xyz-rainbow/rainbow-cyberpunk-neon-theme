@@ -1,5 +1,12 @@
 # Rainbow Cyberpunk Neon
 
+<p align="center">
+  <img src="https://img.shields.io/badge/VS%20Code-Theme-00f0ff?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code Theme" />
+  <img src="https://img.shields.io/badge/Cursor-compatible-ff2bd6?style=flat-square" alt="Cursor" />
+  <img src="https://img.shields.io/badge/license-MIT-c8ff00?style=flat-square" alt="MIT" />
+  <img src="https://img.shields.io/badge/version-0.1.0-00ffff?style=flat-square" alt="0.1.0" />
+</p>
+
 Tema oscuro cyberpunk / cristal para **VS Code** y **Cursor**: lima, cyan, amarillo, rosa, naranja y rojo neón, con fondos púrpura translúcidos.
 
 No hace falta Marketplace: instálalo desde este repositorio (véase abajo).
