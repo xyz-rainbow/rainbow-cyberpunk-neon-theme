@@ -9,7 +9,7 @@
 
 Tema oscuro cyberpunk / cristal para **VS Code** y **Cursor**: lima, cyan, amarillo, rosa, naranja y rojo neón, con fondos púrpura translúcidos.
 
-No hace falta Marketplace: instálalo desde este repositorio (véase abajo).
+El paquete está preparado para **Visual Studio Marketplace** (`package.json` listo), pero **aún no está publicado**. Por ahora instálalo desde este repositorio o con un VSIX local (véase abajo).
 
 ## Paleta (prioridad visual)
 
@@ -24,12 +24,25 @@ No hace falta Marketplace: instálalo desde este repositorio (véase abajo).
 
 ![Rainbow Cyberpunk Neon](./media/screenshot-cyberpunk.png)
 
-## Instalación desde GitHub (sin tarjeta, sin Marketplace)
+## Instalación desde GitHub (sin Marketplace)
 
 ### Opción A: clonar en la carpeta de extensiones (Cursor)
 
+Carpeta de extensiones de Cursor según SO:
+
+| SO | Ruta |
+| --- | --- |
+| **Linux** | `~/.cursor/extensions` |
+| **macOS** | `~/.cursor/extensions` |
+| **Windows** | `%USERPROFILE%\.cursor\extensions` |
+
 ```bash
+# Linux / macOS
 cd ~/.cursor/extensions
+git clone https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme.git
+
+# Windows (PowerShell)
+cd $env:USERPROFILE\.cursor\extensions
 git clone https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme.git
 ```
 
@@ -42,15 +55,36 @@ En el clon del repo:
 ```bash
 cd rainbow-cyberpunk-neon-theme
 npx @vscode/vsce package
-code --install-extension rainbow-cyberpunk-neon-theme-0.1.0.vsix
+VERSION=$(node -p "require('./package.json').version")
 ```
 
-En Cursor suele ser el mismo comando `code` o instala el `.vsix` desde la paleta de comandos si tu build lo permite.
-
-### Opción C: VS Code (extensión en `~/.vscode/extensions`)
+Instala el VSIX generado (`rainbow-cyberpunk-neon-theme-${VERSION}.vsix`):
 
 ```bash
+# VS Code
+code --install-extension "rainbow-cyberpunk-neon-theme-${VERSION}.vsix"
+
+# Cursor (CLI `cursor`)
+cursor --install-extension "rainbow-cyberpunk-neon-theme-${VERSION}.vsix"
+```
+
+En Cursor también puedes instalar el `.vsix` desde la paleta de comandos (**Extensions: Install from VSIX...**) si tu build lo permite.
+
+### Opción C: VS Code (extensión en carpeta de extensiones)
+
+| SO | Ruta |
+| --- | --- |
+| **Linux** | `~/.vscode/extensions` |
+| **macOS** | `~/.vscode/extensions` |
+| **Windows** | `%USERPROFILE%\.vscode\extensions` |
+
+```bash
+# Linux / macOS
 cd ~/.vscode/extensions
+git clone https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme.git
+
+# Windows (PowerShell)
+cd $env:USERPROFILE\.vscode\extensions
 git clone https://github.com/xyz-rainbow/rainbow-cyberpunk-neon-theme.git
 ```
 
@@ -67,5 +101,14 @@ Puedes refinar peso de fuente en `settings.json`:
 
 - GitHub: **xyz-rainbow**
 - Correo: `rainbow@rainbowtechnology.xyz`
+
+## Sponsor this project
+
+Si te gusta el tema, puedes apoyar el proyecto:
+
+- [Buy Me a Coffee](https://buymeacoffee.com/xyzclouds)
+- [Ko-fi](https://ko-fi.com/xyzclouds)
+- [Patreon](https://patreon.com/xyzclouds)
+- [PayPal](https://paypal.me/rainbowkolors)
 
 MIT License — ver `LICENSE`.
